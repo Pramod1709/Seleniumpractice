@@ -30,7 +30,7 @@ public class BootstrapDropdownTest extends Base{
 				.visibilityOf(driver.findElement(By.xpath("//span[contains(text(),'Shared Services')]"))));
 		driver.findElement(By.xpath("//span[contains(text(),'Shared Services')]")).click();
 		Thread.sleep(2000);
-		List<WebElement> list = driver.findElements(By.xpath("//ul[@class='static']//li"));
+		List<WebElement> list = driver.findElements(By.xpath("//ul[@class='static']//ul[@class='dynamic']//li//a[@class='dynamic menu-item']"));
 		for (WebElement item : list) {
 			System.out.println(item.getText());
 			if (item.getText().equals("Payroll")) {
