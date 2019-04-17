@@ -20,12 +20,15 @@ public class Base {
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", "D:\\ChromeDriver\\chromedriver.exe");
 		driver = new ChromeDriver();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 	}
 
-	@AfterClass
-	public void teardown() {
-		//driver.quit();
-	}
+	/*@AfterClass
+	public static void teardown() {
+		driver.close();
+	}*/
 }
+ 

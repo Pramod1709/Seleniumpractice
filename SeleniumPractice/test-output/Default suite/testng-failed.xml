@@ -3,15 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.practice.tests.GoogleSearchTest">
+      <class name="com.practice.tests.AnnotationTransformerTest">
         <methods>
-          <include name="setup"/>
-          <include name="googleSearchTest"/>
-          <include name="loadBrowser"/>
-          <include name="teardown"/>
-          <include name="closeBrowser"/>
+          <include name="test2"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- com.practice.tests.GoogleSearchTest -->
+      </class> <!-- com.practice.tests.AnnotationTransformerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -24,7 +24,7 @@ public class GoogleSearchTest extends Base{
 		driver.get("https://www.google.com/");
 	}
 
-	@Test
+	@Test(retryAnalyzer = com.Analyzer.RetryAnalyzer.class)
 	public void googleSearchTest() {
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys(Search);
 		List<WebElement> searchList = driver.findElements(By.xpath("//ul[@class='erkvQe']//li"));

@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [SeleniumPracticeTest-Suite]">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [SeleniumPracticeTest-Suite]" parallel="classes">
   <listeners>
-    <listener class-name="com.Utils.TestListener"/>
-    <listener class-name="com.Utils.AnnotationTransformer"/>
+    <listener class-name="com.Analyzer.AnnotationTransformer"/>
   </listeners>
-  <test thread-count="5" name="SeleniumPracticeRegression(failed)">
+  <test thread-count="2" name="SeleniumPracticeRegression(failed)" parallel="classes">
     <classes>
-      <class name="com.practice.tests.DataProviderTest">
+      <class name="com.practice.tests.AnnotationTransformerTest">
         <methods>
-          <include name="setup"/>
-          <include name="dataProviderTest"/>
-          <include name="loadBrowser"/>
-          <include name="teardown"/>
-          <include name="shutdown"/>
+          <include name="test2"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- com.practice.tests.DataProviderTest -->
-      <class name="com.practice.tests.ScreenShotTest">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="loadBrowser"/>
-          <include name="screenShotTest"/>
-          <include name="shutdown"/>
-        </methods>
-      </class> <!-- com.practice.tests.ScreenShotTest -->
+      </class> <!-- com.practice.tests.AnnotationTransformerTest -->
     </classes>
   </test> <!-- SeleniumPracticeRegression(failed) -->
 </suite> <!-- Failed suite [SeleniumPracticeTest-Suite] -->

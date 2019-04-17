@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="SeleniumPracticeTest-Suite">
+<suite name="SeleniumPracticeTest-Suite" parallel = "classes" thread-count="2">
 	<listeners>
-		<listener class-name="com.Utils.TestListener" />
-		<listener class-name="com.Utils.AnnotationTransformer" />
+		<!-- <listener class-name="com.Utils.TestListener" />
+		<listener class-name="com.Utils.AnnotationTransformer" /> -->
+		<listener class-name="com.Analyzer.AnnotationTransformer" />
+		
 	</listeners>
 	<test name="SeleniumPracticeRegression">
 		<classes>
-			<class name="com.practice.tests.BusBookingTest" />
+			<!-- <class name="com.practice.tests.BusBookingTest" />
 			<class name="com.practice.tests.BootstrapDropdownTest" />
 			<class name="com.practice.tests.DataProviderTest" />
 			<class name="com.practice.tests.GoogleSearchTest" />
 			<class name="com.practice.tests.JavaScriptTest" />
 			<class name="com.practice.tests.ScreenShotTest" />
+			<class name="com.practice.tests.DynamicTableHandling" />
+			<class name="com.practice.tests.WindowHandling" />
+			<class name="com.practice.tests.LinksTesting" /> -->
+			<class name="com.practice.tests.AnnotationTransformerTest" />
 		</classes>
 	</test>
 </suite>
