@@ -35,8 +35,8 @@ public class DynamicTableHandling extends Base {
 
 		System.out.println("----------------------------------Using List of price---------------------------------");
 		
-		List<WebElement> columns = driver.findElements(By.xpath("//*[@id=\"leftcontainer\"]/table/thead/tr/th"));
-		List<WebElement> rows = driver.findElements(By.xpath("//*[@id=\"leftcontainer\"]/table/tbody/tr/td[1]"));
+		List<WebElement> columns = driver.findElements(By.xpath("//*[@id='leftcontainer']/table/thead/tr/th"));
+		List<WebElement> rows = driver.findElements(By.xpath("//*[@id='leftcontainer']/table/tbody/tr/td[1]"));
 
 		String beforeXpath = "/html[1]/body[1]/div[1]/div[3]/div[1]/table[1]/tbody[1]/tr[";
 		String afterXpath = "]/td[";

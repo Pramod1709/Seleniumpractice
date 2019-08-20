@@ -35,7 +35,7 @@ public class ExcelFileReader {
 		
 		excelData = new ArrayList<ExcelData>();
 		for(int i=1; i<=totalRows; i++) {
-			Row row = sheet.getRow(i);
+			 Row row = sheet.getRow(i);
 				
 			ExcelData data = new ExcelData();
 			

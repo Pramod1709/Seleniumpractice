@@ -18,7 +18,7 @@ public class Base {
 
 	@BeforeClass
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "D:\\ChromeDriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\Automation\\NewChromeDriver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -31,4 +31,3 @@ public class Base {
 		driver.close();
 	}*/
 }
- 

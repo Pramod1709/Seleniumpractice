@@ -30,7 +30,7 @@ public class BootstrapDropdown extends Base {
 				
 		Thread.sleep(2000);
 		
-		List<WebElement> list = driver.findElements(By.xpath("//li[contains(@class, 'static dynamic-children')]//ul//li"));
+		List<WebElement> list = driver.findElements(By.xpath("//ul[@class='static']//li[1]//ul//a"));
 		for(WebElement element : list) {
 			if(element.getText().equals("Human Resources")) {
 				 element.click(); 

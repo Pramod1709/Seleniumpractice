@@ -23,7 +23,7 @@ public class DropdownsOnYouHomePage extends Base {
 	public void sharedServicesDropdown() {
 		String sharedServices = driver.findElement(By.xpath("//span[contains(text(),'Shared Services')]")).getText();
 		driver.findElement(By.xpath("//span[contains(text(),'Shared Services')]")).click();
-		List<WebElement> list = driver.findElements(By.xpath("//ul[@class='static']//ul[@class='dynamic']//li//span[@class='menu-item-text']"));
+		List<WebElement> list = driver.findElements(By.xpath("//ul[@class='static']//li[1]//ul//a"));
 		
 		System.out.println(sharedServices + " : ");
 		
@@ -36,7 +36,7 @@ public class DropdownsOnYouHomePage extends Base {
 	public void businessGroupsDropdown() {
 		String businessGroups = driver.findElement(By.xpath("//span[contains(text(),'Business Groups')]")).getText();
 		driver.findElement(By.xpath("//span[contains(text(),'Business Groups')]")).click();
-		List<WebElement> list = driver.findElements(By.xpath(""));
+		List<WebElement> list = driver.findElements(By.xpath("//ul[@class='static']//li[2]//ul//a"));
 		
 	}
 	
